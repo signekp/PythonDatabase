@@ -1,0 +1,65 @@
+<!-- Jinja2 is used -->
+<!-- opretter en mappe "templates", har vores html filer her -->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="static/style.css" rel="stylesheet" />
+
+    <!-- Title sat med Jinja -->
+    <title>{{ the_title }}</title>
+</head>
+<body>
+    <h2>Data from CarsDB</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <a href="create">Create</a>
+            </div>
+            <div class="col-3">
+                <a href="index">Read</a>
+            </div>
+            <div class="col-3">
+                <a href="update">Update</a>
+            </div>
+            <div class="col-3">
+                <a href="delete">Delete</a>
+            </div>
+
+        </div>
+    </div>
+
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CarID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>MaxSpeed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Code blocks. Vores rows in value(variable fra vores funktion) -->
+            {% for row in values %}
+            <tr>
+                <td>{{ row[0] }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ row[1] }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ row[2] }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>
+        <!-- Fastestcar data sat med Jinja -->
+        Fastest car: <br />
+        {{ fastest_car }}
+    </h3>
+</body>
+</html>

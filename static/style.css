@@ -1,0 +1,51 @@
+.table {
+    width: 70% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important; 
+    margin-top: 30px !important;
+    margin-bottom: 30px !important
+}
+
+body {
+
+    text-align: center !important;
+
+}
+
+h2 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    font-size: 25px !important;
+}
+
+.container a {
+    font-size: 20px !important;
+    color: forestgreen !important; 
+}
+
+.form-control {
+    text-align: center!important;
+    margin-bottom: 30px !important;
+}
+
+.form-containger {
+    border: 1px solid grey !important;
+    padding: 30px !important;
+    width: 40%!important;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 50px;
+}
+
+.control-label {
+    margin-bottom: 20px!important;
+}
+
+.btn {
+    background-color: forestgreen !important;
+    color: white; 
+}
+
+h3 {
+    font-size: 20px!important;
+}
